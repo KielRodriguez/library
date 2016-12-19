@@ -1,0 +1,20 @@
+<h1>Library's Persons</h1>
+<table>
+  <thead>
+    <tr>
+      <td>User</td>
+      <td>Birthday</td>
+      <td>Estatus</td>
+      <td>Actions</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @persons.each do |person| %>
+      <tr>
+        <td><%= "#{person.first_name} #{person.last_name}" %></td>
+        <td><%= person.birthday %></td>
+        <td><%= person.status? ? "A" : "I" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
